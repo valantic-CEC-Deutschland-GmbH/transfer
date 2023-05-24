@@ -6,7 +6,6 @@ namespace ValanticSpryker\Zed\Transfer;
 
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Transfer\TransferDependencyProvider as SprykerTransferDependencyProvider;
-use ValanticSpryker\Zed\Transfer\Communication\Plugin\AddBlacklistFilePlugin;
 
 class TransferDependencyProvider extends SprykerTransferDependencyProvider
 {
