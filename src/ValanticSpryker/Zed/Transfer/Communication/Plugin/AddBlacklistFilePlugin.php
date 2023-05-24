@@ -7,7 +7,9 @@ namespace ValanticSpryker\Zed\Transfer\Communication\Plugin;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 /**
- * @method \ValanticSpryker\Zed\Transfer\TransferConfig getConfig()
+ * @method \Spryker\Zed\Transfer\TransferConfig getConfig()
+ * @method \Spryker\Zed\Transfer\Communication\TransferCommunicationFactory getFactory()
+ * @method \Spryker\Zed\Transfer\Business\TransferFacadeInterface getFacade()
  */
 class AddBlacklistFilePlugin extends AbstractPlugin implements FilePluginInterface
 {
