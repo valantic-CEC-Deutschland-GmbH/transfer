@@ -30,8 +30,6 @@ class TransferDependencyProvider extends SprykerTransferDependencyProvider
      */
     protected function getValidateFilePlugins(): array
     {
-        return [
-            new AddBlacklistFilePlugin(),
-        ];
+        return [];
     }
 }
