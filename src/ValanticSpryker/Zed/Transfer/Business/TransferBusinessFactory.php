@@ -4,8 +4,11 @@ declare(strict_types = 1);
 
 namespace ValanticSpryker\Zed\Transfer\Business;
 
-use Spryker\Zed\Transfer\Business\Model\Generator\FinderInterface;
+use Psr\Log\LoggerInterface;
+use Spryker\Zed\Transfer\Business\Model\TransferValidatorInterface;
 use Spryker\Zed\Transfer\Business\TransferBusinessFactory as SprykerTransferBusinessFactory;
+use ValanticSpryker\Zed\Transfer\Business\Generator\FinderFilteredInterface;
+use ValanticSpryker\Zed\Transfer\Business\Model\TransferValidator;
 use ValanticSpryker\Zed\Transfer\Business\Transfer\Definition\TransferDefinitionFinder;
 use ValanticSpryker\Zed\Transfer\TransferDependencyProvider;
 
@@ -15,9 +18,24 @@ use ValanticSpryker\Zed\Transfer\TransferDependencyProvider;
 class TransferBusinessFactory extends SprykerTransferBusinessFactory
 {
     /**
-     * @return \Spryker\Zed\Transfer\Business\Model\Generator\FinderInterface
+     * @param \Psr\Log\LoggerInterface $messenger
+     *
+     * @return \Spryker\Zed\Transfer\Business\Model\TransferValidatorInterface
      */
-    protected function createFinder(): FinderInterface
+    public function createValidator(LoggerInterface $messenger): TransferValidatorInterface
+    {
+        return new TransferValidator(
+            $messenger,
+            $this->createFinder(),
+            $this->getConfig(),
+            $this->createXmlValidator(),
+        );
+    }
+
+    /**
+     * @return \ValanticSpryker\Zed\Transfer\Business\Generator\FinderFilteredInterface
+     */
+    protected function createFinder(): FinderFilteredInterface
     {
         return new TransferDefinitionFinder(
             $this->getFilePlugins(),

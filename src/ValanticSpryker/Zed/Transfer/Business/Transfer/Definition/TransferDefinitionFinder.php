@@ -7,8 +7,9 @@ namespace ValanticSpryker\Zed\Transfer\Business\Transfer\Definition;
 use Spryker\Zed\Transfer\Business\Transfer\Definition\TransferDefinitionFinder as SprykerTransferDefinitionFinder;
 use Spryker\Zed\Transfer\Dependency\Service\TransferToUtilGlobServiceInterface;
 use Spryker\Zed\Transfer\TransferConfig;
+use ValanticSpryker\Zed\Transfer\Business\Generator\FinderFilteredInterface;
 
-class TransferDefinitionFinder extends SprykerTransferDefinitionFinder
+class TransferDefinitionFinder extends SprykerTransferDefinitionFinder implements FinderFilteredInterface
 {
     /**
      * @param array<\ValanticSpryker\Zed\Transfer\Communication\Plugin\FilePluginInterface> $finderFilePlugins
@@ -23,7 +24,7 @@ class TransferDefinitionFinder extends SprykerTransferDefinitionFinder
     /**
      * @return array<\Symfony\Component\Finder\SplFileInfo>
      */
-    public function getXmlTransferDefinitionFiles(): array
+    public function getXmlFilteredTransferDefinitionFiles(): array
     {
         $files = parent::getXmlTransferDefinitionFiles();
 
