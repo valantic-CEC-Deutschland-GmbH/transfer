@@ -8,6 +8,8 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 /**
  * @method \ValanticSpryker\Zed\Transfer\TransferConfig getConfig()
+ *
+ * phpcs:ignoreFile
  */
 class AddBlacklistFilePlugin extends AbstractPlugin implements FilePluginInterface
 {
