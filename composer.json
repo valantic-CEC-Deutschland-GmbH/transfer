@@ -1,5 +1,5 @@
 {
-    "name": "valantic-cec/transfer",
+    "name": "valantic-spryker/transfer",
     "type": "library",
     "description": "extends spryker transfer package",
     "license": "proprietary",
