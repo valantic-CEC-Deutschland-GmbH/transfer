@@ -1,5 +1,5 @@
 {
-    "name": "valantic-spryker/transfer",
+    "name": "valantic-cec/transfer",
     "type": "library",
     "description": "extends spryker transfer package",
     "license": "MIT",
@@ -33,9 +33,6 @@
         ],
         "process-timeout": 900,
         "chromium-revision": 814168,
-        "gitlab-domains": [
-            "gitlab.nxs360.com"
-        ],
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true
