@@ -2,7 +2,7 @@
     "name": "valantic-cec/transfer",
     "type": "library",
     "description": "extends spryker transfer package",
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "php": ">=8.0",
         "spryker/transfer": ">=3.0.0"
