@@ -1,15 +1,13 @@
 # valantic-spryker/transfer
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg)](https://php.net/)
-[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/transfer/badges/main/pipeline.svg)](https://gitlab.nxs360.com/packages/php/spryker/transfer/-/pipelines?page=1&scope=all&ref=main)
-[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/transfer/badges/main/coverage.svg)](https://packages.gitlab-pages.nxs360.com/php/spryker/transfer)
 
 # Description
  - adds file plugins to transfer:validate
  - adds blacklist plugins to configure filesnames that should be ignored on validation
 
 # Install
-- see https://gitlab.nxs360.com/groups/packages/php/spryker/-/packages
+- `composer require valantic-cec/transfer`
 
 # HowTos Cli
 
