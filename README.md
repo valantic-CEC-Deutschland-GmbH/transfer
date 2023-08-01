@@ -7,7 +7,7 @@
  - adds blacklist plugins to configure filesnames that should be ignored on validation
 
 # Install
-- `composer require valantic-cec/transfer`
+- `composer require valantic-spryker/transfer`
 
 # HowTos Cli
 
